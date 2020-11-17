@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  background: #333;
+  height: 300vh;
+}
+
+.menu {
+  background: #333;
+  position: fixed;
+  color: yellowgreen;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(#333, #333),
+    radial-gradient(circle at right bottom, #f00, #00f);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.menu ul {
+  list-style: none;
+}
+.menu i {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.menu li {
+  border-right: #bbbbbb solid 2px;
+  float: left;
+  padding: 15px 20px;
+  color: #bbbbbb;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.menu li:last-child {
+  border: none;
+}
+.menu li:hover {
+  color: #f0d;
+}
+
+.menu .active {
+  color: #2df;
+}
+
+.signup {
+  position: absolute;
+  top: 5px;
+  right: 80px;
+  text-decoration: none;
+  color: #bbbbbb;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#333, #333),
+    radial-gradient(circle at top left, #2df, #f0d);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.signup:hover {
+  background-image: linear-gradient(#2df, #f0d),
+    radial-gradient(circle at top left, #2df, #f0d);
+  background-clip: border-box, border-box;
+  color: #000;
+}
+
+.signup span {
+  display: block;
+  padding: 10px 30px;
+}

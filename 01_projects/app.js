@@ -20,7 +20,7 @@ const changeSlide = () => {
   if (activeSlide === slider.length) {
     activeSlide = 0;
   }
-  console.log(activeSlide);
+
   img.src = slider[activeSlide].img;
 };
 let indexInterval = setInterval(changeSlide, time);
@@ -32,14 +32,14 @@ previousSlide.addEventListener(`click`, () => {
     activeSlide = slider.length - 1;
   }
   img.src = slider[activeSlide].img;
-  console.log(activeSlide);
+
   indexInterval = setInterval(changeSlide, time);
 });
 
 nextSlide.addEventListener(`click`, () => {
   clearInterval(indexInterval);
   activeSlide++;
-  console.log(activeSlide);
+
   if (activeSlide === slider.length) {
     activeSlide = 0;
   }

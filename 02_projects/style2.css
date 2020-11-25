@@ -20,86 +20,138 @@ body {
 }
 
 /* 
-MENU =================================================================================================
-*/
+  MENU =================================================================================================
+  */
 
 .menu {
-  background: #333;
+  /* background: #333; */
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  border-bottom: 2px solid transparent;
+  border-bottom: #333 solid 2px;
+  /* border-bottom: 2px solid transparent;
   background-image: linear-gradient(#333, #333),
     radial-gradient(circle at right bottom, #f00, #00f);
   background-origin: border-box;
-  background-clip: content-box, border-box;
+  background-clip: content-box, border-box; */
   z-index: 1;
 }
 
 .menu ul {
   list-style: none;
+  margin-left: 10%;
 }
 .menu i {
   margin-right: 20px;
   font-size: 20px;
-
-  padding: 5px;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  background-image: linear-gradient(#333, #333),
-    radial-gradient(circle at top left, #2df, #f0d);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
 }
 
 .menu li {
-  border-right: #bbbbbb solid 2px;
+  border-right: #333 solid 2px;
   float: left;
   padding: 15px 20px;
-  color: #bbbbbb;
-  cursor: pointer;
-  text-transform: uppercase;
 }
 .menu li:last-child {
   border: none;
 }
-.menu li:hover {
-  color: #f0d;
-}
 
-.menu .active {
-  color: #2df;
-}
+/* .menu .active {
+    color: #2df;
+  } */
 
-/* .signup {
-  position: absolute;
-  top: 5px;
-  right: 80px;
-  text-decoration: none;
-  color: #bbbbbb;
-  border: 2px solid transparent;
-  border-radius: 20px;
-  background-image: linear-gradient(#333, #333),
-    radial-gradient(circle at top left, #2df, #f0d);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-.signup i {
-  display: none;
-}
-
-.signup:hover {
-  background-image: linear-gradient(#2df, #f0d),
-    radial-gradient(circle at top left, #2df, #f0d);
-  background-clip: border-box, border-box;
-  color: #000;
-}
-
-.signup span {
+.menu a {
+  position: relative;
   display: block;
-  padding: 10px 30px;
-} */
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 7px;
+  background-color: transparent;
+  /* transition: transform 1s;
+  transition-delay: 1s; */
+}
+
+.menu a:hover {
+  background-color: #333;
+  color: #bbb;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
+.menu a span {
+  position: absolute;
+  display: block;
+  background-color: #333;
+}
+
+.menu a span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+
+.menu a:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+.menu a span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.menu a:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+.menu a span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.menu a:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+.menu a span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+.menu a:hover span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
 
 /* 
 SLIDER =================================================================================================
@@ -109,7 +161,7 @@ SLIDER =========================================================================
   position: relative;
   width: 100%;
   height: 75vh;
-  margin-top: 66px;
+  /* margin-top: 66px; */
 }
 
 .slider img {
@@ -157,8 +209,8 @@ SLIDER =========================================================================
   opacity: 1;
 }
 /* 
-LOGO =================================================================================================
-*/
+  LOGO =================================================================================================
+  */
 
 .logo h2 {
   position: relative;

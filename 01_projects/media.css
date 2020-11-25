@@ -1,0 +1,50 @@
+/* 
+MEDIA =================================================================================================
+*/
+
+@media (max-width: 640px) {
+  .menu li {
+    width: 25%;
+    text-align: center;
+  }
+  /* .menu li:last-child {
+      padding: 9.5px 20px;
+    }   singup*/
+  .menu i {
+    margin-right: 0px;
+  }
+
+  .menu li span {
+    display: none;
+  }
+
+  .signup {
+    display: block;
+    position: static;
+  }
+
+  .signup i {
+    display: block;
+    padding: 4px 4px;
+  }
+  .signup span {
+    padding: 0;
+  }
+
+  /* 
+SLIDER =================================================================================================
+*/
+  .slider {
+    width: 100%;
+  }
+
+  .slider .previous {
+    font-size: 50px;
+    width: 20%;
+  }
+
+  .slider .next {
+    width: 20%;
+    font-size: 50px;
+  }
+}

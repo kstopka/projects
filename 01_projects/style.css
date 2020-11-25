@@ -44,6 +44,14 @@ MENU ===========================================================================
 .menu i {
   margin-right: 20px;
   font-size: 20px;
+
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#333, #333),
+    radial-gradient(circle at top left, #2df, #f0d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .menu li {
@@ -166,11 +174,11 @@ h2::before {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #0f9;
+  color: rgb(144, 171, 230);
   -webkit-text-stroke: 0px #555;
-  border-right: 2px solid #0f9;
+  border-right: 2px solid rgb(144, 171, 230);
   overflow: hidden;
-  animation: animate 5s linear infinite both;
+  animation: animate 5s linear infinite both, colors 35s linear infinite both;
 }
 
 @keyframes animate {
@@ -182,5 +190,36 @@ h2::before {
   70%,
   90% {
     width: 100%;
+  }
+}
+
+@keyframes colors {
+  0% {
+    color: rgb(230, 144, 144);
+    border-right: 2px solid rgb(230, 144, 144);
+  }
+  16.66% {
+    color: rgb(230, 230, 144);
+    border-right: 2px solid rgb(230, 230, 144);
+  }
+  33.33% {
+    color: rgb(144, 230, 144);
+    border-right: 2px solid rgb(144, 230, 144);
+  }
+  50% {
+    color: rgb(144, 230, 230);
+    border-right: 2px solid rgb(144, 230, 230);
+  }
+  66.66% {
+    color: rgb(144, 144, 230);
+    border-right: 2px solid rgb(144, 144, 230);
+  }
+  83.33% {
+    color: rgb(230, 144, 230);
+    border-right: 2px solid rgb(230, 144, 230);
+  }
+  100% {
+    color: rgb(230, 144, 144);
+    border-right: 2px solid rgb(230, 144, 144);
   }
 }
